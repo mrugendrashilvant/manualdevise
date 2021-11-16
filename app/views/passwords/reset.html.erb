@@ -1,20 +1,17 @@
 <div class="container" id="login">
 	<div class="screen" id="login-screen">
 		<div class="screen__content">
-			<form class="login">
+			<%= form_with url: '/reset-password', class: "login" do |form| %>
 				<div class="login__field">
 					<i class="login__icon bi bi-person"></i>
-					<input type="password" class="login__input" placeholder="New Password" required>
+					<%= form.password_field :password, class: "login__input", placeholder: "Password" %>
 				</div>
 				<div class="login__field">
-					<i class="login__icon bi bi-lock"></i>
-					<input type="password" class="login__input" placeholder="Confirm Password" required>
+					<i class="login__icon bi bi-person"></i>
+					<%= form.password_field :password_confirmation, class: "login__input", placeholder: "Confirm Password" %>
 				</div>
-				<a href="#" class="button login__submit">
-					<span class="button__text">Reset</span>
-					<i class="button__icon bi bi-chevron-right"></i>
-				</a>				
-			</form>
+				<%= form.submit "Reset", class: "button login__submit"%>				
+			<%end%>
 		</div>
 		<div class="screen__background">
 			<span class="screen__background__shape screen__background__shape4"></span>

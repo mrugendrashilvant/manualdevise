@@ -10,9 +10,9 @@
 					<i class="login__icon bi bi-lock"></i>
 					<%= form.password_field :password, class: "login__input", placeholder: "Password" %>
 				</div>
-                <a class="forgot" href="#">Forgot Password</a>
+                <%= link_to "Forgot Password" , '/forgot-password', class: "forgot" %>
 				
-					<%= form.submit "Login", class: "button login__submit"%>
+				<%= form.submit "Login", class: "button login__submit"%>
 								
 			<%end%>
 		</div>

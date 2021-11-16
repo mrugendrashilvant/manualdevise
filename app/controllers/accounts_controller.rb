@@ -14,6 +14,9 @@ class AccountsController < ApplicationController
         end
     end
 
+    
+	
+
     def logout
         session[:user] = nil 
         flash[:notice] = "Logged out!"

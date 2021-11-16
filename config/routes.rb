@@ -11,5 +11,8 @@ Rails.application.routes.draw do
   get '/logout', to: 'accounts#logout'
 
   get '/forgot-password', to: 'passwords#forgot'
+  post '/forgot-password', to: 'passwords#forgot'
+
   get '/reset-password', to: 'passwords#reset'
+  post '/reset-password', to: 'passwords#reset'
 end

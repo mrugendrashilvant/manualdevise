@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 2021_11_16_045614) do
     t.string "f_name"
     t.string "l_name"
     t.date "date_of_birth"
-    t.integer "mobile"
+    t.string "mobile"
     t.string "email"
     t.string "hashed_password"
     t.datetime "created_at", null: false
