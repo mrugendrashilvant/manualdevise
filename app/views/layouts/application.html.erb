@@ -11,6 +11,12 @@
   </head>
 
   <body>
+  <% if session[:user].nil? %>
+    <%= link_to "SignUp", :controller=> :accounts, :action=> :signup %>
+    <%= link_to "Login", :controller=> :accounts, :action=> :login %>
+  <%else%>
+    <%= link_to "Logout", :controller=> :accounts, :action=> :logout %>
+  <%end%>
     <%= yield %>
   </body>
 </html>

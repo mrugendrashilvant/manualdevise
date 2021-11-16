@@ -1,28 +1,39 @@
 <div class="container" id="login">
 	<div class="screen" id="signup-screen">
 		<div class="screen__content">
-			<form class="login">
+			<%= form_with url: '/signup', class: "login" do |form| %>
 				<div class="login__field">
 					<i class="login__icon bi bi-person"></i>
-					<input type="text" class="login__input" placeholder="Full Name">
+					<%= form.text_field :f_name, class: "login__input", placeholder: "First Name" %>
+				</div>
+				<div class="login__field">
+					<i class="login__icon bi bi-person"></i>
+					<%= form.text_field :l_name, class: "login__input", placeholder: "Last Name" %>
 				</div>
 				<div class="login__field">
 					<i class="login__icon bi bi-envelope"></i>
-					<input type="password" class="login__input" placeholder="EmailID">
+					<%= form.email_field :email, class: "login__input", placeholder: "EmailID" %>
+				</div>
+				<div class="login__field">
+					<i class="login__icon bi bi-calendar"></i>
+					<%= form.date_field :date_of_birth, class: "login__input", placeholder: "Date of Birth" %>
+				</div>
+				<div class="login__field">
+					<i class="login__icon bi bi-phone"></i>
+					<%= form.text_field :mobile, class: "login__input", placeholder: "Mobile No." %>
 				</div>
                 <div class="login__field">
 					<i class="login__icon bi bi-lock"></i>
-					<input type="password" class="login__input" placeholder="New Password">
+					<%= form.password_field :password, class: "login__input", placeholder: "Password" %>
 				</div>
                 <div class="login__field">
 					<i class="login__icon bi bi-lock"></i>
-					<input type="password" class="login__input" placeholder="Repeat Password">
+					<%= form.password_field :password, class: "login__input", placeholder: "Confirm Password" %>
 				</div>
-				<a class="button login__submit">
-					<span class="button__text">Sign Up</span>
-					<i class="button__icon bi bi-chevron-right"></i>
-				</a>				
-			</form>
+				
+					<%= form.submit "Sign up", class: "button login__submit" %>
+								
+			<%end%>
 		</div>
 		<div class="screen__background">
 			<span class="screen__background__shape screen__background__shape4"></span>
